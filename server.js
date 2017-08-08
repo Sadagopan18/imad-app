@@ -64,10 +64,11 @@ function createhtm2(data)
 <link href="/ui/style.css" rel="stylesheet"/>
 </head>
 <body>
+
+<div class="container">
 <div>
 <a href="/">home</a>
 </div>
-<div class="container">
 <p>${date}</p>
 <h1>${heading}</h1>
 ${content}
