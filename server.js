@@ -72,6 +72,7 @@ ${content}
 </body>
 </html>
  `;
+ return con;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -81,8 +82,7 @@ app.get("/article-one",function(req,res){
 });
     
 app.get("/article-two",function(req,res){
-    res.sendFile(path.join(__dirname,'article-two.html'));
-    
+    res.send(createhtm2(articletwo));
 });
 app.get("/article-three",function(req,res){
    res.send("Article-three will be server here"); 
