@@ -65,7 +65,7 @@ function createhtm2(data)
 </head>
 <body>
 <div>
-<a href="/",home>
+<a href="/">home</a>
 </div>
 <div class="container">
 <p>${date}</p>
