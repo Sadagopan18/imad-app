@@ -78,6 +78,39 @@ ${content}
  `;
  return con;
 }
+var articlethree={
+    title:'Article-three|Sadagopan',
+    heading:'Article-three',
+    date:'august 15 2017',
+    content:`
+    <p><em>This is my third article</em></p>
+<p><b>My favorite character in DOTA 2 is Razor</b></p>`
+};
+function createtemp3(data)
+{
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+    var nc =
+`<html>
+    <head>
+        <title>${title}</title>
+
+        <link href="/ui/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+            <a href="/">home</a>
+            <h1>${heading}</h1>
+            <h2>${date}</h2>
+            ${content}
+        </div>
+    </body>
+</html>
+`;
+return nc;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
