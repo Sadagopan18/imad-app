@@ -122,7 +122,7 @@ app.get("/article-two",function(req,res){
     res.send(createhtm2(articletwo));
 });
 app.get("/article-three",function(req,res){
-   res.send("Article-three will be server here"); 
+   res.send(createtemp(articlethree)); 
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
