@@ -4,12 +4,50 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var articleone = { 
 
+    title:'Article-one|Sadagopan',
+    heading:'Article-one',
+    date:'August 8 2017',
+    content:`
+    <p title="Dota 2">I am a professional Dota 2 Player with a solo MMR of 3.2k.My favorite team is EG.My hobby is playing Dota 2 and 
+    Programming</p>
+    <p title="College">I study BE computer science and Engineering in Velammal Engineering College</p>
+    </div>`
+   } ;   
+ function createhtm(data)
+ {
+    var title=data.title;
+    var date=data.date;
+    var heading=data.heading;
+    var content=data.content;
+    var con =
+   ` <html>
+<head>
+<title>Article-One|Sadagopan</title>
+<link href="/ui/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+  <div>
+  <a href="/">HOME</a>
+  </div>
+  <div>
+      ${date}
+  </div>
+<h1>${heading}</h1>
+${content}
+</div>
+</body>
+</html>
+`; 
+return con;
+ }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get("/article-one",function(req,res){
-   res.sendFile(path.join(__dirname,'article-one.html')); 
+   res.send(createhtm(articleone)); 
 });
     
 app.get("/article-two",function(req,res){
