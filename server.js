@@ -64,6 +64,7 @@ function createhtm2(data)
 <link href="/ui/style.css" rel="stylesheet"/>
 </head>
 <body>
+<a href="/",home>
 <div class="container">
 <p>${date}</p>
 <h1>${heading}</h1>
