@@ -43,6 +43,36 @@ ${content}
 `; 
 return con;
  }
+ var articletwo = {
+     title:'Article-two|Sadagopan',
+     heading:'Article-two',
+     date:'August 12 2017',
+     content:`
+     <p><em>This is my second article</em></p>
+     <p><b>Keep calm and play dota 2</b></p>`
+} ; 
+function createhtm2(data)
+{
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+    var con=` 
+        <!DOCTYPE html>
+<head>
+<title>${title}</title>
+<link href="/ui/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<p>${date}</p>
+<h1>${heading}</h1>
+${content}
+</div>
+</body>
+</html>
+ `;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
