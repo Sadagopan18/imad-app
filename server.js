@@ -26,11 +26,12 @@ var articleone = {
 <head>
 <title>Article-One|Sadagopan</title>
 <link href="/ui/style.css" rel="stylesheet"/>
+
+</head>
+<body>
 <script>
 alert("I am javascript!!!!");
 </script>
-</head>
-<body>
 <div class="container">
   <div>
   <a href="/">HOME</a>
