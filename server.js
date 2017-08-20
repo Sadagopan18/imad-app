@@ -26,6 +26,9 @@ var articleone = {
 <head>
 <title>Article-One|Sadagopan</title>
 <link href="/ui/style.css" rel="stylesheet"/>
+<script>
+alert("I am javascript!!!!");
+</script>
 </head>
 <body>
 <div class="container">
